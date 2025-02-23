@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-const Product = ({ products }) => {
+const Product = ({ products, onAddToCart }) => {
   const params = useParams();
 
   const productSingle = products.filter((product) => {
@@ -10,7 +10,7 @@ const Product = ({ products }) => {
 
   return (
     <div className="flex flex-row">
-      <div className="bg-white rounded-lg shadow-md overflow-hidden flex mx-auto w-80% ">
+      <div className="bg-white rounded-lg shadow-md overflow-hidden flex mx-auto mt-5 w-400">
         <div className="w-1/3">
           <img
             src={productSingle[0].image}
@@ -20,9 +20,9 @@ const Product = ({ products }) => {
         </div>
 
         <div className="w-2/3 p-6 flex flex-col justify-center">
-          <h3 className="text-xl font-bold text-gray-800 mb-2">
+          <h2 className="text-gray-800 mb-2 text-2xl font-bold">
             {productSingle[0].title}
-          </h3>
+          </h2>
 
           <p className="text-gray-600 mb-4">{productSingle[0].description}</p>
 
@@ -33,11 +33,14 @@ const Product = ({ products }) => {
           </div>
 
           <p className="text-lg font-bold text-gray-800 mb-4">
-            {productSingle[0].price}
+            {productSingle[0].price} $
           </p>
 
-          <button className="w-40 h-20 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-            Add to Cart
+          <button
+            className="w-60 h-20 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 text-2xl font-bold"
+            onClick={() => onAddToCart(productSingle[0])}
+          >
+            Add to Cart <i class="fa-solid fa-cart-plus"></i>
           </button>
         </div>
       </div>

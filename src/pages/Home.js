@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       <div className="relative py-20">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 h-170">
           <img
             src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
             alt="Clothing Store"
@@ -12,8 +12,8 @@ const Home = () => {
           />
           <div className="absolute inset-0 bg-gray-800 opacity-50"></div>
         </div>
-        <div className="relative container mx-auto px-6 text-center">
-          <div className="bg-white opacity-90 rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+        <div className="relative container mx-auto my-40 px-6 text-center">
+          <div className="bg-white opacity-90 rounded-lg shadow-lg p-8 max-w-10xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               Your style is your way
             </h2>

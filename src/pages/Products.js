@@ -6,7 +6,7 @@ const Products = ({ products }) => {
 
   return (
     <div>
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-6 pt-12 pb-30">
         <h2 className="text-2xl font-bold text-gray-800 mb-8">Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {products.map((product) => (
