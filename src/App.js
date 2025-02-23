@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
+import OrderSummary from "./pages/OrderSummary";
 import ProductsContext from "./contexts/ProductContext";
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
         />
 
         <Route path="cart" element={<Cart cart={cart} />} />
-        <Route path="checkout" element={<Checkout />} />
+        <Route path="checkout" element={<OrderSummary />} />
       </Routes>
 
       <Footer />
