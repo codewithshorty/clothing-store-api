@@ -1,9 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Products = ({ products }) => {
-  console.log(products);
+  const navigate = useNavigate();
 
-  products.map((product) => console.log(product.id));
   return (
     <div>
       <div className="container mx-auto px-6 py-12">
@@ -31,6 +31,7 @@ const Products = ({ products }) => {
                   <button
                     href="#"
                     className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                    onClick={() => navigate(`/product/${product.id}`)}
                   >
                     View Details
                   </button>
