@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cart }) => {
@@ -16,12 +16,12 @@ const Cart = ({ cart }) => {
   }, 0);
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8 items-center">
+    <div className="min-h-screen bg-gray-100 p-8 pb-30 items-center">
       {cart.length > 0 ? (
         <>
-          <h1 className="text-3xl font-bold text-center mb-8">
+          <h2 className="text-3xl font-bold text-center mb-8">
             Your Purchased Items
-          </h1>
+          </h2>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <table className="w-full">
               <thead className="bg-gray-200">
@@ -64,7 +64,7 @@ const Cart = ({ cart }) => {
 
           <div className="mt-8 flex justify-between items-center">
             <div className="text-2xl font-bold text-gray-800">
-              Total: <span className="text-blue-600">{totalCost} $</span>
+              Total Cost: <span className="text-blue-600">{totalCost} $</span>
             </div>
 
             <button

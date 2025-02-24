@@ -18,16 +18,16 @@ const Products = ({ products }) => {
                   className="w-full h-48 pt-6 object-contain"
                 />
                 <div className="p-6">
-                  <h4 className="text-xl font-bold text-gray-800 mb-2">
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">
                     {product.title}
-                  </h4>
+                  </h3>
                   <div className="mb-4">
                     <span className="inline-block bg-blue-100 text-blue-800 text-sm font-light px-3 py-1 rounded-full">
                       {product.category}
                     </span>
                   </div>
 
-                  <p className="text-lg font-bold  ">{product.price}$</p>
+                  <h4 className="text-lg font-bold  ">{product.price}$</h4>
                   <button
                     href="#"
                     className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
